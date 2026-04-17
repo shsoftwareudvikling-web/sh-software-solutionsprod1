@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SH Software Solutions — Professionel Softwareudvikling</title>
+  <meta name="description" content="SH Software Solutions leverer professionel softwareudvikling — hjemmesider, apps, web-API'er og IT-support til danske virksomheder.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#home" class="nav__logo">
+        <svg class="nav__logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#42C8F5"/>
+              <stop offset="100%" stop-color="#9333EA"/>
+            </linearGradient>
+          </defs>
+          <rect x="12" y="12" width="76" height="76" rx="18" fill="url(#logoGrad)" transform="rotate(45 50 50)"/>
+          <rect x="24" y="35" width="46" height="11" rx="5.5" fill="white"/>
+          <rect x="30" y="54" width="46" height="11" rx="5.5" fill="white"/>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="nav__logo-sh">SH</span>
+          <span class="nav__logo-company">Software Solutions</span>
+        </div>
+      </a>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#services" class="nav__link" data-da="Services" data-en="Services">Services</a>
+        <a href="#about" class="nav__link" data-da="Om mig" data-en="About me">Om mig</a>
+        <a href="#prices" class="nav__link" data-da="Priser" data-en="Prices">Priser</a>
+        <a href="#portfolio" class="nav__link" data-da="Portfolio" data-en="Portfolio">Portfolio</a>
+        <a href="#references" class="nav__link" data-da="Referencer" data-en="References">Referencer</a>
+        <a href="#contact" class="nav__link nav__link--cta" data-da="Kontakt" data-en="Contact">Kontakt</a>
+      </div>
+
+      <div class="nav__right">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span id="langDA" class="lang-toggle__opt lang-toggle__opt--active">DA</span>
+          <span class="lang-toggle__sep">|</span>
+          <span id="langEN" class="lang-toggle__opt">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero__glow hero__glow--1"></div>
+    <div class="hero__glow hero__glow--2"></div>
+    <div class="container hero__container">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span data-da="Åben for nye projekter" data-en="Available for new projects">Åben for nye projekter</span>
+        </div>
+        <h1 class="hero__title">
+          <span data-da="Vi bygger" data-en="We build">Vi bygger</span>
+          <span class="hero__title-grad" data-da=" digitale løsninger " data-en=" digital solutions "> digitale løsninger </span>
+          <span data-da="der virker" data-en="that work">der virker</span>
+        </h1>
+        <p class="hero__sub" data-da="Professionel softwareudvikling til virksomheder — hjemmesider, apps, API'er og IT-support." data-en="Professional software development for businesses — websites, apps, APIs and IT support.">
+          Professionel softwareudvikling til virksomheder — hjemmesider, apps, API'er og IT-support.
+        </p>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--primary" data-da="Se vores services" data-en="View our services">Se vores services</a>
+          <a href="#contact" class="btn btn--ghost" data-da="Kontakt os" data-en="Contact us">Kontakt os</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-num">50+</span>
+            <span class="hero__stat-label" data-da="Projekter leveret" data-en="Projects delivered">Projekter leveret</span>
+          </div>
+          <div class="hero__stat-sep"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">5+</span>
+            <span class="hero__stat-label" data-da="Års erfaring" data-en="Years experience">Års erfaring</span>
+          </div>
+          <div class="hero__stat-sep"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num">100%</span>
+            <span class="hero__stat-label" data-da="Tilfredse kunder" data-en="Satisfied clients">Tilfredse kunder</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="code-window">
+          <div class="code-window__bar">
+            <span class="dot dot--r"></span>
+            <span class="dot dot--y"></span>
+            <span class="dot dot--g"></span>
+            <span class="code-window__file">solution.ts</span>
+          </div>
+          <pre class="code-window__body"><code><span class="ck">const</span> <span class="cv">solution</span> <span class="co">=</span> <span class="ck">new</span> <span class="cc">SHSoftware</span><span class="cp">({</span>
+  <span class="ca">services</span><span class="co">:</span> <span class="cp">[</span>
+    <span class="cs">"websites"</span><span class="cp">,</span>
+    <span class="cs">"apps"</span><span class="cp">,</span>
+    <span class="cs">"web APIs"</span><span class="cp">,</span>
+    <span class="cs">"IT support"</span><span class="cp">,</span>
+  <span class="cp">]</span><span class="cp">,</span>
+  <span class="ca">quality</span><span class="co">:</span>  <span class="cs">"premium"</span><span class="cp">,</span>
+  <span class="ca">delivery</span><span class="co">:</span> <span class="cs">"on-time"</span><span class="cp">,</span>
+<span class="cp">}</span><span class="cp">)</span><span class="cp">;</span>
+
+<span class="ck">await</span> <span class="cv">solution</span><span class="cp">.</span><span class="cf">launch</span><span class="cp">()</span><span class="cp">;</span>
+<span class="cm">// ✓ Success!</span></code></pre>
+        </div>
+        <div class="tech-stack">
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Azure</span>
+          <span class="tech-badge">Docker</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag" data-da="Hvad vi tilbyder" data-en="What we offer">Hvad vi tilbyder</span>
+        <h2 class="section__title" data-da="Vores services" data-en="Our services">Vores services</h2>
+        <p class="section__sub" data-da="Vi leverer skræddersyede digitale løsninger tilpasset din virksomheds behov og budget." data-en="We deliver tailor-made digital solutions adapted to your business needs and budget.">Vi leverer skræddersyede digitale løsninger tilpasset din virksomheds behov og budget.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="Hjemmesider" data-en="Websites">Hjemmesider</h3>
+          <p class="service-card__desc" data-da="Moderne, hurtige og mobilvenlige hjemmesider der konverterer besøgende til kunder." data-en="Modern, fast and mobile-friendly websites that convert visitors into customers.">Moderne, hurtige og mobilvenlige hjemmesider der konverterer besøgende til kunder.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="Apps" data-en="Apps">Apps</h3>
+          <p class="service-card__desc" data-da="Brugervenlige web- og mobilapps skræddersyet til din virksomheds processer og arbejdsgange." data-en="User-friendly web and mobile apps tailored to your business processes and workflows.">Brugervenlige web- og mobilapps skræddersyet til din virksomheds processer og arbejdsgange.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16M6.5 8.5L2 12l4.5 3.5M17.5 8.5L22 12l-4.5 3.5"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="Web API'er" data-en="Web APIs">Web API'er</h3>
+          <p class="service-card__desc" data-da="Robuste og skalerbare API'er der binder dine systemer og tjenester sømløst sammen." data-en="Robust and scalable APIs that seamlessly connect your systems and services.">Robuste og skalerbare API'er der binder dine systemer og tjenester sømløst sammen.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="IT-support" data-en="IT Support">IT-support</h3>
+          <p class="service-card__desc" data-da="Hurtig og pålidelig IT-support til din virksomhed — remote eller på stedet i Danmark." data-en="Fast and reliable IT support for your business — remote or on-site in Denmark.">Hurtig og pålidelig IT-support til din virksomhed — remote eller på stedet i Danmark.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="Cloud & hosting" data-en="Cloud & Hosting">Cloud & hosting</h3>
+          <p class="service-card__desc" data-da="Opsætning og drift af cloud-løsninger — AWS, Azure og Google Cloud til din applikation." data-en="Setup and operation of cloud solutions — AWS, Azure and Google Cloud for your application.">Opsætning og drift af cloud-løsninger — AWS, Azure og Google Cloud til din applikation.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card__icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="service-card__title" data-da="Sikkerhed & GDPR" data-en="Security & GDPR">Sikkerhed & GDPR</h3>
+          <p class="service-card__desc" data-da="Sikring af din digitale løsning mod trusler og rådgivning om GDPR-compliance." data-en="Protecting your digital solution from threats and advising on GDPR compliance.">Sikring af din digitale løsning mod trusler og rådgivning om GDPR-compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="section section--alt" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual reveal">
+          <div class="about__avatar-wrap">
+            <div class="about__avatar">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="avGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#42C8F5"/>
+                    <stop offset="100%" stop-color="#9333EA"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="38" r="22" fill="url(#avGrad)" opacity="0.9"/>
+                <ellipse cx="50" cy="85" rx="32" ry="18" fill="url(#avGrad)" opacity="0.7"/>
+              </svg>
+                <img src="images/billed-af-mig.png" alt="Mit billede" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1;" />
+            </div>
+            <div class="about__avatar-ring"></div>
+          </div>
+          <div class="about__pills">
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Azure</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">REST API</span>
+          </div>
+        </div>
+        <div class="about__content reveal">
+          <span class="section__tag" data-da="Om mig" data-en="About me">Om mig</span>
+          <h2 class="section__title" data-da="Uddannet datamatiker med passion for kode" data-en="Trained computer scientist with a passion for code">Uddannet datamatiker med passion for kode</h2>
+          <p class="about__text" data-da="Jeg er en uddannet datamatiker med solid erfaring i at bygge professionelle digitale løsninger til virksomheder i alle størrelser — fra startups til etablerede virksomheder." data-en="I am a trained computer scientist with solid experience building professional digital solutions for businesses of all sizes — from startups to established companies.">
+            Jeg er en uddannet datamatiker med solid erfaring i at bygge professionelle digitale løsninger til virksomheder i alle størrelser — fra startups til etablerede virksomheder.
+          </p>
+          <p class="about__text" data-da="Hos SH Software Solutions samarbejder vi tæt med dig for at forstå præcis, hvad der skal til for at løse dine udfordringer — og leverer en løsning der rent faktisk virker i praksis." data-en="At SH Software Solutions we work closely with you to understand exactly what it takes to solve your challenges — and deliver a solution that actually works in practice.">
+            Hos SH Software Solutions samarbejder vi tæt med dig for at forstå præcis, hvad der skal til for at løse dine udfordringer — og leverer en løsning der rent faktisk virker i praksis.
+          </p>
+          <div class="about__checkmarks">
+            <div class="about__check">
+              <span class="about__check-icon">✓</span>
+              <span data-da="Agil og fleksibel arbejdsmetode" data-en="Agile and flexible working method">Agil og fleksibel arbejdsmetode</span>
+            </div>
+            <div class="about__check">
+              <span class="about__check-icon">✓</span>
+              <span data-da="Fast pris eller timebasis — du vælger" data-en="Fixed price or hourly — your choice">Fast pris eller timebasis — du vælger</span>
+            </div>
+            <div class="about__check">
+              <span class="about__check-icon">✓</span>
+              <span data-da="Løbende support og vedligeholdelse" data-en="Ongoing support and maintenance">Løbende support og vedligeholdelse</span>
+            </div>
+            <div class="about__check">
+              <span class="about__check-icon">✓</span>
+              <span data-da="Fuld transparens om pris og proces" data-en="Full transparency on price and process">Fuld transparens om pris og proces</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn--primary" data-da="Lad os snakke" data-en="Let's talk">Lad os snakke</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICES ── -->
+  <section class="section" id="prices">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag" data-da="Hvad koster det?" data-en="What does it cost?">Hvad koster det?</span>
+        <h2 class="section__title" data-da="Priser & pakker" data-en="Prices & packages">Priser & pakker</h2>
+        <p class="section__sub" data-da="Alle priser aftales individuelt — ingen skjulte gebyrer. Vi tilpasser løsning og pris til præcis dine behov." data-en="All prices are agreed individually — no hidden fees. We tailor the solution and price to your exact needs.">Alle priser aftales individuelt — ingen skjulte gebyrer. Vi tilpasser løsning og pris til præcis dine behov.</p>
+      </div>
+      <div class="prices__grid">
+
+        <div class="price-card reveal">
+          <div class="price-card__top">
+            <h3 class="price-card__name" data-da="Softwareudvikling" data-en="Software Development">Softwareudvikling</h3>
+            <p class="price-card__tagline" data-da="Webapps, interne systemer og digitale platforme." data-en="Web apps, internal systems and digital platforms.">Webapps, interne systemer og digitale platforme.</p>
+          </div>
+          <div class="price-card__price">
+            <span class="price-card__amount price-card__amount--quote" data-da="Tilbud" data-en="Quote">Tilbud</span>
+          </div>
+          <ul class="price-card__list">
+            <li data-da="Skræddersyet til dine behov" data-en="Tailored to your needs">Skræddersyet til dine behov</li>
+            <li data-da="Sprintbaseret udvikling" data-en="Sprint-based development">Sprintbaseret udvikling</li>
+            <li data-da="Løbende demo & feedback" data-en="Continuous demo & feedback">Løbende demo & feedback</li>
+            <li data-da="Fokus på kvalitet & sikkerhed" data-en="Focus on quality & security">Fokus på kvalitet & sikkerhed</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full" data-da="Få et tilbud" data-en="Get a quote">Få et tilbud</a>
+        </div>
+
+        <div class="price-card price-card--featured reveal">
+          <div class="price-card__badge" data-da="Mest populær" data-en="Most popular">Mest populær</div>
+          <div class="price-card__top">
+            <h3 class="price-card__name" data-da="Data & Integrationer" data-en="Data & Integrations">Data & Integrationer</h3>
+            <p class="price-card__tagline" data-da="API-udvikling og systemintegration der binder det hele sammen." data-en="API development and system integration that ties it all together.">API-udvikling og systemintegration der binder det hele sammen.</p>
+          </div>
+          <div class="price-card__price">
+            <span class="price-card__amount price-card__amount--quote" data-da="Tilbud" data-en="Quote">Tilbud</span>
+          </div>
+          <ul class="price-card__list">
+            <li data-da="Tilpasset projektets omfang" data-en="Adapted to project scope">Tilpasset projektets omfang</li>
+            <li data-da="REST API & webhooks" data-en="REST API & webhooks">REST API & webhooks</li>
+            <li data-da="Systemintegration" data-en="System integration">Systemintegration</li>
+            <li data-da="Datamigrering & transformation" data-en="Data migration & transformation">Datamigrering & transformation</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--full" data-da="Få et tilbud" data-en="Get a quote">Få et tilbud</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-card__top">
+            <h3 class="price-card__name" data-da="Automatisering & IT-support" data-en="Automation & IT Support">Automatisering & IT-support</h3>
+            <p class="price-card__tagline" data-da="Procesoptimering og teknisk support til din virksomhed." data-en="Process optimization and technical support for your business.">Procesoptimering og teknisk support til din virksomhed.</p>
+          </div>
+          <div class="price-card__price">
+            <span class="price-card__amount price-card__amount--quote" data-da="Tilbud" data-en="Quote">Tilbud</span>
+          </div>
+          <ul class="price-card__list">
+            <li data-da="Baseret på opgavens kompleksitet" data-en="Based on task complexity">Baseret på opgavens kompleksitet</li>
+            <li data-da="Automatisering af arbejdsgange" data-en="Workflow automation">Automatisering af arbejdsgange</li>
+            <li data-da="Remote & on-site support" data-en="Remote & on-site support">Remote & on-site support</li>
+            <li data-da="Systemopsætning & vedligeholdelse" data-en="System setup & maintenance">Systemopsætning & vedligeholdelse</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full" data-da="Kontakt for tilbud" data-en="Contact for quote">Kontakt for tilbud</a>
+        </div>
+
+      </div>
+      <p class="prices__note" data-da="* Alle priser aftales individuelt og er ekskl. moms. Kontakt os for et uforpligtende tilbud tilpasset dit projekt." data-en="* All prices are agreed individually and excl. VAT. Contact us for a no-obligation quote tailored to your project.">* Alle priser aftales individuelt og er ekskl. moms. Kontakt os for et uforpligtende tilbud tilpasset dit projekt.</p>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section class="section section--alt" id="portfolio">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag" data-da="Tidligere projekter" data-en="Previous projects">Tidligere projekter</span>
+        <h2 class="section__title" data-da="Portfolio" data-en="Portfolio">Portfolio</h2>
+        <p class="section__sub" data-da="Et udpluk af projekter vi har leveret til tilfredse kunder." data-en="A selection of projects we have delivered to satisfied clients.">Et udpluk af projekter vi har leveret til tilfredse kunder.</p>
+      </div>
+      <div class="portfolio__grid">
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:195">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="Hjemmeside" data-en="Website">Hjemmeside</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="Virksomhedshjemmeside" data-en="Corporate Website">Virksomhedshjemmeside</h3>
+            <p class="portfolio-card__desc" data-da="Moderne hjemmeside med CMS og SEO-optimering for en konsulentvirksomhed." data-en="Modern website with CMS and SEO optimization for a consulting firm.">Moderne hjemmeside med CMS og SEO-optimering for en konsulentvirksomhed.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:270">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="Web App" data-en="Web App">Web App</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="Bookingsystem" data-en="Booking System">Bookingsystem</h3>
+            <p class="portfolio-card__desc" data-da="Skræddersyet bookingplatform med kalenderintegration og onlinebetaling." data-en="Custom booking platform with calendar integration and online payment.">Skræddersyet bookingplatform med kalenderintegration og onlinebetaling.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:155">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="API" data-en="API">API</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="ERP ↔ Webshop Integration" data-en="ERP ↔ Webshop Integration">ERP ↔ Webshop Integration</h3>
+            <p class="portfolio-card__desc" data-da="REST API der synkroniserer lager, ordrer og kunder mellem ERP og webshop." data-en="REST API synchronizing inventory, orders and customers between ERP and webshop.">REST API der synkroniserer lager, ordrer og kunder mellem ERP og webshop.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:30">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="Mobil App" data-en="Mobile App">Mobil App</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="Intern personalapp" data-en="Internal Staff App">Intern personalapp</h3>
+            <p class="portfolio-card__desc" data-da="App til tidsregistrering og intern kommunikation for en produktionsvirksomhed." data-en="App for time tracking and internal communication for a manufacturing company.">App til tidsregistrering og intern kommunikation for en produktionsvirksomhed.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:340">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="E-commerce" data-en="E-commerce">E-commerce</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="Webshop" data-en="Webshop">Webshop</h3>
+            <p class="portfolio-card__desc" data-da="Fuld e-handelsplatform med produktstyring, kurv og betalingsgateway." data-en="Full e-commerce platform with product management, cart and payment gateway.">Fuld e-handelsplatform med produktstyring, kurv og betalingsgateway.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img" style="--hue:220">
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__type" data-da="Dashboard" data-en="Dashboard">Dashboard</span>
+            </div>
+          </div>
+          <div class="portfolio-card__body">
+            <h3 class="portfolio-card__title" data-da="Data Dashboard" data-en="Data Dashboard">Data Dashboard</h3>
+            <p class="portfolio-card__desc" data-da="Realtids-dashboard med KPI-overblik og rapportering til ledelsen." data-en="Real-time dashboard with KPI overview and management reporting.">Realtids-dashboard med KPI-overblik og rapportering til ledelsen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REFERENCES ── -->
+  <section class="section" id="references">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__tag" data-da="Hvad siger kunderne?" data-en="What do clients say?">Hvad siger kunderne?</span>
+        <h2 class="section__title" data-da="Referencer" data-en="References">Referencer</h2>
+      </div>
+      <div class="refs__grid">
+
+        <div class="ref-card reveal">
+          <div class="ref-card__stars">★★★★★</div>
+          <p class="ref-card__quote" data-da="&quot;SH Software Solutions leverede præcis det vi havde brug for — til tiden og inden for budgettet. Utrolig professionel service fra start til slut.&quot;" data-en="&quot;SH Software Solutions delivered exactly what we needed — on time and within budget. Incredibly professional service from start to finish.&quot;">"SH Software Solutions leverede præcis det vi havde brug for — til tiden og inden for budgettet. Utrolig professionel service fra start til slut."</p>
+          <div class="ref-card__author">
+            <div class="ref-card__avatar">MN</div>
+            <div>
+              <div class="ref-card__name">Mads Nielsen</div>
+              <div class="ref-card__role" data-da="CEO, Nielsen Consulting" data-en="CEO, Nielsen Consulting">CEO, Nielsen Consulting</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card reveal">
+          <div class="ref-card__stars">★★★★★</div>
+          <p class="ref-card__quote" data-da="&quot;Vores nye bookingsystem har sparet os for mange timer om ugen. Samarbejdet var nemt og transparent fra dag ét.&quot;" data-en="&quot;Our new booking system has saved us many hours per week. The collaboration was easy and transparent from day one.&quot;">"Vores nye bookingsystem har sparet os for mange timer om ugen. Samarbejdet var nemt og transparent fra dag ét."</p>
+          <div class="ref-card__author">
+            <div class="ref-card__avatar">SL</div>
+            <div>
+              <div class="ref-card__name">Sara Larsen</div>
+              <div class="ref-card__role" data-da="Indehaver, SL Klinik" data-en="Owner, SL Clinic">Indehaver, SL Klinik</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ref-card reveal">
+          <div class="ref-card__stars">★★★★★</div>
+          <p class="ref-card__quote" data-da="&quot;Fremragende IT-support. Problemer løses lynhurtigt, og forklaringerne er altid klare og forståelige — også for ikke-teknikere.&quot;" data-en="&quot;Excellent IT support. Problems are resolved lightning fast, and the explanations are always clear and understandable — even for non-techies.&quot;">"Fremragende IT-support. Problemer løses lynhurtigt, og forklaringerne er altid klare og forståelige — også for ikke-teknikere."</p>
+          <div class="ref-card__author">
+            <div class="ref-card__avatar">PH</div>
+            <div>
+              <div class="ref-card__name">Peter Hansen</div>
+              <div class="ref-card__role" data-da="IT-ansvarlig, Hansen Industri" data-en="IT Manager, Hansen Industri">IT-ansvarlig, Hansen Industri</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section section--alt" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <span class="section__tag" data-da="Kom i gang" data-en="Get started">Kom i gang</span>
+          <h2 class="section__title" data-da="Lad os bygge noget sammen" data-en="Let's build something together">Lad os bygge noget sammen</h2>
+          <p class="contact__lead" data-da="Har du et projekt i tankerne? Skriv til os — vi vender tilbage inden for 24 timer." data-en="Have a project in mind? Write to us — we'll get back to you within 24 hours.">Har du et projekt i tankerne? Skriv til os — vi vender tilbage inden for 24 timer.</p>
+          <div class="contact__details">
+            <a href="mailto:shsoftwareudvikling@gmail.com" class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+              </span>
+              <span>shsoftwareudvikling@gmail.com</span>
+            </a>
+            <a href="tel:+4571614979" class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span>+45 71 72 67 38</span>
+            </a>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span data-da="Danmark" data-en="Denmark">Danmark</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="name" data-da="Navn *" data-en="Name *">Navn *</label>
+              <input class="form__input" type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email" data-da="Email *" data-en="Email *">Email *</label>
+              <input class="form__input" type="email" id="email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="phone" data-da="Telefon" data-en="Phone">Telefon</label>
+              <input class="form__input" type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="service" data-da="Jeg er interesseret i" data-en="I am interested in">Jeg er interesseret i</label>
+              <select class="form__input form__select" id="service" name="service">
+                <option value="" data-da="Vælg service..." data-en="Select service...">Vælg service...</option>
+                <option value="website" data-da="Hjemmeside" data-en="Website">Hjemmeside</option>
+                <option value="app" data-da="App" data-en="App">App</option>
+                <option value="api" data-da="Web API" data-en="Web API">Web API</option>
+                <option value="support" data-da="IT-support" data-en="IT Support">IT-support</option>
+                <option value="other" data-da="Andet" data-en="Other">Andet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="message" data-da="Besked *" data-en="Message *">Besked *</label>
+            <textarea class="form__input form__textarea" id="message" name="message" required rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-da="Send besked" data-en="Send message">Send besked</button>
+          <div class="form__success" id="formSuccess" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <span data-da="Tak! Vi vender tilbage hurtigst muligt." data-en="Thank you! We'll get back to you as soon as possible.">Tak! Vi vender tilbage hurtigst muligt.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="nav__logo">
+            <svg class="nav__logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#42C8F5"/>
+                  <stop offset="100%" stop-color="#9333EA"/>
+                </linearGradient>
+              </defs>
+              <rect x="12" y="12" width="76" height="76" rx="18" fill="url(#footerLogoGrad)" transform="rotate(45 50 50)"/>
+              <rect x="24" y="35" width="46" height="11" rx="5.5" fill="white"/>
+              <rect x="30" y="54" width="46" height="11" rx="5.5" fill="white"/>
+            </svg>
+            <div class="nav__logo-text">
+              <span class="nav__logo-sh">SH</span>
+              <span class="nav__logo-company">Software Solutions</span>
+            </div>
+          </a>
+          <p class="footer__desc" data-da="Professionel softwareudvikling til din virksomhed." data-en="Professional software development for your business.">Professionel softwareudvikling til din virksomhed.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-da="Services" data-en="Services">Services</h4>
+          <a href="#services" data-da="Hjemmesider" data-en="Websites">Hjemmesider</a>
+          <a href="#services" data-da="Apps" data-en="Apps">Apps</a>
+          <a href="#services" data-da="Web API'er" data-en="Web APIs">Web API'er</a>
+          <a href="#services" data-da="IT-support" data-en="IT Support">IT-support</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-da="Virksomhed" data-en="Company">Virksomhed</h4>
+          <a href="#about" data-da="Om mig" data-en="About">Om mig</a>
+          <a href="#portfolio" data-da="Portfolio" data-en="Portfolio">Portfolio</a>
+          <a href="#prices" data-da="Priser" data-en="Prices">Priser</a>
+          <a href="#references" data-da="Referencer" data-en="References">Referencer</a>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading" data-da="Kontakt" data-en="Contact">Kontakt</h4>
+          <a href="mailto:shsoftwareudvikling@gmail.com">shsoftwareudvikling@gmail.com</a>
+          <a href="tel:+4571726738">+45 71 72 67 38</a>
+          <span data-da="CVR: 45703622" data-en="CVR: 45703622">CVR: 45703622</span>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-da="© 2025 SH Software Solutions. Alle rettigheder forbeholdes." data-en="© 2025 SH Software Solutions. All rights reserved.">© 2025 SH Software Solutions. Alle rettigheder forbeholdes.</span>
+        <span data-da="Bygget med ❤️ i Danmark" data-en="Built with ❤️ in Denmark">Bygget med ❤️ i Danmark</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
