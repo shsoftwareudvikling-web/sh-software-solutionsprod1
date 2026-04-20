@@ -140,6 +140,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   width: auto;
   display: block;
   flex-shrink: 0;
+  margin-top: 10px;
 }
 .nav__logo-text {
   display: flex;
