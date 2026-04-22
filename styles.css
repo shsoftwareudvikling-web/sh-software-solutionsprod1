@@ -981,7 +981,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding-bottom: 48px;
 }
 .footer__brand { display: flex; flex-direction: column; gap: 14px; }
-.footer__desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+.footer__desc { font-size: 0.87rem; color: #9ca3af; line-height: 1.6; }
 .footer__col {
   display: flex;
   flex-direction: column;
@@ -998,7 +998,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .footer__col a,
 .footer__col span {
   font-size: 0.87rem;
-  color: var(--text-muted);
+  color: #9ca3af;
   transition: color var(--transition);
 }
 .footer__col a:hover { color: var(--blue); }
@@ -1009,7 +1009,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   padding: 20px 0;
   border-top: 1px solid var(--card-border);
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: #9ca3af;
   flex-wrap: wrap;
   gap: 8px;
 }
